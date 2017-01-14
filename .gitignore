@@ -1,5 +1,5 @@
-*.scss
 dev/index.html
 dev/template/header.html
 dev/template/block/block_flexboxgrid.html
 dev/template/footer.html
+dev/scss/_var_map_color.scss

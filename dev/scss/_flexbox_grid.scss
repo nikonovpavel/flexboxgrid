@@ -1,0 +1,63 @@
+//===================================================
+// SETTING FLEXBOX GRID
+//===================================================
+
+// var grid flex
+// --------------------------------------------------
+
+$flex-container: 100%;
+$flex-item-padding: .4%;
+
+$flex-start: 1;
+$flex-end: 12;
+
+$flex-common: 25, 40, 60, 75, 80;
+
+.flex-container {
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	width: $flex-container;
+	justify-content: center;
+
+	//justify-content: center; — flex-элементы выравниваются по центру flex-контейнера.
+
+	//justify-content: space-between; — flex-элементы отображаются с равным интервалом между ними,
+	//а первый и последний flex-элементы выравниваются по краям flex-контейнера.
+
+	//justify-content: space-around; — flex-элементы отображаются с равным интервалом вокруг каждого
+	//flex-элемента, включая первый и последний flex-элементы.
+}
+
+// grid flex item
+// --------------------------------------------------
+
+.flex-item {
+	flex: 0 1;
+	min-width: 300px;
+	padding: $flex-item-padding;
+}
+
+[class*='flex-item-'] {
+	flex: 0 1 auto;
+	padding: $flex-item-padding;
+}
+
+@for $i from $flex-start through $flex-end {
+	.flex-item-#{$i} {width: $flex-container / $i;}
+}
+
+@each $i in $flex-common {
+	.flex-item-#{$i} {width: percentage($i / 100);}
+}
+
+// grid flex item modification
+// --------------------------------------------------
+
+.flex-content {
+	color: $white;
+	padding: 20px;
+	font-size: 1.6rem;
+	text-align: center;
+	background-color: color('blue_light', '300');
+}
