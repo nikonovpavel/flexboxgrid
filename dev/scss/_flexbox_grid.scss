@@ -64,8 +64,8 @@ $flex-common: 25, 40, 60, 75, 80;
 
 
 .flex-item {
-	flex: 0 1;
-	min-width: 300px;
+	flex: 0 1 25%;
+	min-width: 250px;
 	padding: $flex-item-padding;
 }
 
