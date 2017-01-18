@@ -6,12 +6,22 @@
 // --------------------------------------------------
 
 $flex-container: 100%;
-$flex-item-padding: .4%;
+$flex-item-padding: 5px;
 
 $flex-start: 1;
 $flex-end: 12;
 
 $flex-common: 25, 40, 60, 75, 80;
+
+// var point responsive
+// --------------------------------------------------
+
+$screen-large: 1440px;
+$screen-medium: 1280px;
+$screen-small: 1024px;
+$handheld-large: 768px;
+$handheld-medium: 480px;
+$handheld-small: 320px;
 
 // justify-content: center;
 // flex-элементы выравниваются по центру flex-контейнера.
