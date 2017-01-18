@@ -92,3 +92,17 @@ $flex-common: 25, 40, 60, 75, 80;
 	text-align: center;
 	background-color: color('blue_light', '300');
 }
+
+// grid flex width responsive
+// --------------------------------------------------
+
+@media only screen and (max-width: $handheld_large) {
+	.flex-item {flex: 0 1 50%;}
+	@for $i from $flex-start through $flex-end {
+		.flex-item-#{$i + $i} {flex: 0 1 50%;}
+	}
+}
+
+@media only screen and (max-width: $handheld-medium) {
+	.flex-item, [class*='flex-item-'] {flex: 0 1 100%;}
+}
